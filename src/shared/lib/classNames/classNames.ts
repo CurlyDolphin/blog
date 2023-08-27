@@ -9,3 +9,4 @@ export const classNames = (cls: string, mods?: Mods, additional?: string[] ): st
             .map(([className, value]) => className)
     ].join('')
 }
+

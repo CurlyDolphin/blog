@@ -17,11 +17,10 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             clean: true
         },
         plugins: buildPlugins(options),
-        devtool: isDev ? 'inline-source-map': undefined,
-        devServer: buildDevServer(options),
+        devtool: isDev ? 'inline-source-map' : undefined,
         module: {
             rules: buildLoaders(options)
         },
-        resolve: buildResolves()
+        resolve: buildResolves(options)
     }
 }
